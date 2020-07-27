@@ -1,0 +1,1 @@
+Logging to /home/hubble-02/Pycharm Projects/IvLabs/AdvancedRobotics/cs287hw1/cs287-hw1-code/data/part1/GridWorldEnv0/policy_typedeterministic_temperature1.0/
