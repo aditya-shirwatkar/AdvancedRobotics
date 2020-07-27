@@ -1,4 +1,4 @@
-Logging to /home/hubble-02/Pycharm Projects/IvLabs/AdvancedRobotics/cs287hw1/cs287-hw1-code/data/part1/GridWorldEnv0/policy_typedeterministic_temperature1.0/
+Logging to /home/hubble-02/Pycharm Projects/IvLabs/AdvancedRobotics/cs287hw1/cs287-hw1-code/data/part1/GridWorldEnv1/policy_typedeterministic_temperature1.0/
 ------------------------------
 | Average Returns | 0        |
 | Iteration       | 0        |
@@ -8,23 +8,23 @@ Logging to /home/hubble-02/Pycharm Projects/IvLabs/AdvancedRobotics/cs287hw1/cs2
 | Iteration       | 1        |
 ------------------------------
 ------------------------------
-| Average Returns | 0.1      |
+| Average Returns | 0        |
 | Iteration       | 2        |
 ------------------------------
 ------------------------------
-| Average Returns | 0.1      |
+| Average Returns | 0        |
 | Iteration       | 3        |
 ------------------------------
 ------------------------------
-| Average Returns | 0.1      |
+| Average Returns | 0        |
 | Iteration       | 4        |
 ------------------------------
 ------------------------------
-| Average Returns | 0.05     |
+| Average Returns | 0        |
 | Iteration       | 5        |
 ------------------------------
 ------------------------------
-| Average Returns | 0.1      |
+| Average Returns | 0        |
 | Iteration       | 6        |
 ------------------------------
 ------------------------------
@@ -56,15 +56,15 @@ Logging to /home/hubble-02/Pycharm Projects/IvLabs/AdvancedRobotics/cs287hw1/cs2
 | Iteration       | 13       |
 ------------------------------
 ------------------------------
-| Average Returns | 0.05     |
+| Average Returns | 0        |
 | Iteration       | 14       |
 ------------------------------
 ------------------------------
-| Average Returns | 0.05     |
+| Average Returns | 0.1      |
 | Iteration       | 15       |
 ------------------------------
 ------------------------------
-| Average Returns | 0.05     |
+| Average Returns | 0        |
 | Iteration       | 16       |
 ------------------------------
 ------------------------------
@@ -84,19 +84,19 @@ Logging to /home/hubble-02/Pycharm Projects/IvLabs/AdvancedRobotics/cs287hw1/cs2
 | Iteration       | 20       |
 ------------------------------
 ------------------------------
-| Average Returns | 0.05     |
+| Average Returns | 0        |
 | Iteration       | 21       |
 ------------------------------
 ------------------------------
-| Average Returns | 0.1      |
+| Average Returns | 0        |
 | Iteration       | 22       |
 ------------------------------
 ------------------------------
-| Average Returns | 0.15     |
+| Average Returns | 0        |
 | Iteration       | 23       |
 ------------------------------
 ------------------------------
-| Average Returns | 0.1      |
+| Average Returns | 0        |
 | Iteration       | 24       |
 ------------------------------
 ------------------------------
@@ -104,7 +104,7 @@ Logging to /home/hubble-02/Pycharm Projects/IvLabs/AdvancedRobotics/cs287hw1/cs2
 | Iteration       | 25       |
 ------------------------------
 ------------------------------
-| Average Returns | 0.1      |
+| Average Returns | 0        |
 | Iteration       | 26       |
 ------------------------------
 ------------------------------
@@ -136,15 +136,15 @@ Logging to /home/hubble-02/Pycharm Projects/IvLabs/AdvancedRobotics/cs287hw1/cs2
 | Iteration       | 33       |
 ------------------------------
 ------------------------------
-| Average Returns | 0.05     |
+| Average Returns | 0        |
 | Iteration       | 34       |
 ------------------------------
 ------------------------------
-| Average Returns | 0.05     |
+| Average Returns | 0        |
 | Iteration       | 35       |
 ------------------------------
 ------------------------------
-| Average Returns | 0.05     |
+| Average Returns | 0        |
 | Iteration       | 36       |
 ------------------------------
 ------------------------------
@@ -152,15 +152,15 @@ Logging to /home/hubble-02/Pycharm Projects/IvLabs/AdvancedRobotics/cs287hw1/cs2
 | Iteration       | 37       |
 ------------------------------
 ------------------------------
-| Average Returns | 0        |
+| Average Returns | 0.05     |
 | Iteration       | 38       |
 ------------------------------
 ------------------------------
-| Average Returns | 0.05     |
+| Average Returns | 0        |
 | Iteration       | 39       |
 ------------------------------
 ------------------------------
-| Average Returns | 0.05     |
+| Average Returns | 0        |
 | Iteration       | 40       |
 ------------------------------
 ------------------------------
@@ -168,7 +168,7 @@ Logging to /home/hubble-02/Pycharm Projects/IvLabs/AdvancedRobotics/cs287hw1/cs2
 | Iteration       | 41       |
 ------------------------------
 ------------------------------
-| Average Returns | 0.05     |
+| Average Returns | 0        |
 | Iteration       | 42       |
 ------------------------------
 ------------------------------
@@ -180,7 +180,7 @@ Logging to /home/hubble-02/Pycharm Projects/IvLabs/AdvancedRobotics/cs287hw1/cs2
 | Iteration       | 44       |
 ------------------------------
 ------------------------------
-| Average Returns | 0.05     |
+| Average Returns | 0        |
 | Iteration       | 45       |
 ------------------------------
 ------------------------------
@@ -188,11 +188,11 @@ Logging to /home/hubble-02/Pycharm Projects/IvLabs/AdvancedRobotics/cs287hw1/cs2
 | Iteration       | 46       |
 ------------------------------
 ------------------------------
-| Average Returns | 0        |
+| Average Returns | 0.05     |
 | Iteration       | 47       |
 ------------------------------
 ------------------------------
-| Average Returns | 0        |
+| Average Returns | 0.05     |
 | Iteration       | 48       |
 ------------------------------
 ------------------------------

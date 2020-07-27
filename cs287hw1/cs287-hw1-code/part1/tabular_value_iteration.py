@@ -134,9 +134,18 @@ class ValueIteration(object):
 
         """ INSERT YOUR CODE HERE"""
         if self.policy_type == 'deterministic':
-            raise NotImplementedError
+            print(self.transitions.shape)
+            print(self.rewards.shape)
+            print(self.value_fun.get_values().shape)
+            print(self.discount)
+            s = self.value_fun.get_values()
+            # next_v = np.max((np.sum((self.transitions[s]*(self.rewards[s] + self.discount*s)), axis=2)), axis=1)
+            next_v = np.max((np.sum((self.transitions*(self.rewards + self.discount*s)), axis=2)), axis=1)
+            # print(next_v)
+            # raise NotImplementedError
         elif self.policy_type == 'max_ent':
-            raise NotImplementedError
+            # raise NotImplementedError
+            next_v = self.value_fun.get_values()
             """ Your code ends here"""
         else:
             raise NotImplementedError
@@ -155,9 +164,12 @@ class ValueIteration(object):
 
         """INSERT YOUR CODE HERE"""
         if self.policy_type == 'deterministic':
-            raise NotImplementedError
+            pi = np.argmax((np.sum((self.transitions*(self.rewards + self.discount*s)), axis=2)), axis=1)
+
+            # raise NotImplementedError
         elif self.policy_type == 'max_ent':
-            raise NotImplementedError
+            # raise NotImplementedError
+            pi = self.policy.get_probs()
             """ Your code ends here"""
         else:
             raise NotImplementedError
