@@ -1,6 +1,6 @@
 {
   "env": "GridWorldEnv0",
   "policy_type": "deterministic",
-  "render": false,
+  "render": true,
   "temperature": 1.0
 }
