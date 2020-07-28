@@ -138,13 +138,22 @@ class ValueIteration(object):
             # print(self.rewards.shape)
             # print(self.value_fun.get_values().shape)
             # print(self.discount)
-            s = self.value_fun.get_values()
-            next_v = np.max((np.sum((self.transitions*(self.rewards + self.discount*s)), axis=2)), axis=1)
-            # print(next_v)
+            v = self.value_fun.get_values()
+            next_v = np.max((np.sum((self.transitions*(self.rewards + self.discount*v)), axis=2)), axis=1)
             # raise NotImplementedError
         elif self.policy_type == 'max_ent':
             # raise NotImplementedError
-            next_v = self.value_fun.get_values()
+            # v = self.value_fun.get_values()
+            # Q = self.rewards + self.discount*v 
+            # Q -= np.expand_dims(np.max(Q, axis=1), axis=1)
+            # next_v = self.eps*np.log(np.sum( np.sum(np.exp(Q/self.eps), axis=2), axis=1))
+            v = self.value_fun.get_values()
+            Q = self.rewards + self.discount*v 
+            Q = np.sum(Q - np.expand_dims(np.max(Q, axis=1), axis=1), axis=2)
+            next_v = self.eps*np.log(np.sum(np.exp(Q/self.eps + self.eps), axis=1))
+
+            # print(next_v)
+
             """ Your code ends here"""
         else:
             raise NotImplementedError
@@ -163,13 +172,28 @@ class ValueIteration(object):
 
         """INSERT YOUR CODE HERE"""
         if self.policy_type == 'deterministic':
-            s = self.value_fun.get_values()
-            pi = np.argmax((np.sum((self.transitions*(self.rewards + self.discount*s)), axis=2)), axis=1)
+            v = self.value_fun.get_values()
+            pi = np.argmax((np.sum((self.transitions*(self.rewards + self.discount*v)), axis=2)), axis=1)
 
             # raise NotImplementedError
         elif self.policy_type == 'max_ent':
             # raise NotImplementedError
-            pi = self.policy.get_probs()
+            # v = self.value_fun.get_values()
+            # Q = self.rewards + self.discount*v
+            # Q -= np.expand_dims(np.max(Q, axis=1), axis=1)
+            # z = np.sum( np.exp(np.sum( Q/self.eps, axis=2)) , axis=1)
+            # z = np.expand_dims(z, axis=1)
+            # pi = (1/z)*np.exp(np.sum( Q/self.eps, axis=2))
+            v = self.value_fun.get_values()
+            Q = self.rewards + self.discount*v
+            Q = np.sum(Q - np.expand_dims(np.max(Q, axis=1), axis=1), axis=2)
+            # print(Q.shape)
+            z = np.sum(np.exp(Q/self.eps + self.eps), axis=1)
+            z = np.expand_dims(z, axis=1) 
+            # print(z.shape)
+            pi = (1/z)*np.exp(Q/self.eps + self.eps)
+            # print(pi.shape)
+            # pi = self.policy.get_probs()
             """ Your code ends here"""
         else:
             raise NotImplementedError
