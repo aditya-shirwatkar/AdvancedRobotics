@@ -57,7 +57,7 @@ class ValueIteration(object):
         self.rewards = env.rewards
         self.value_fun = value_fun
         self.policy = policy
-        self.discount = env.discount
+        self.discount = env.discount    
         self.precision = precision
         self.log_itr = log_itr
         assert policy_type in ['deterministic', 'max_ent']
@@ -148,15 +148,48 @@ class ValueIteration(object):
             # Q = self.rewards + self.discount*v 
             # Q -= np.expand_dims(np.max(Q, axis=1), axis=1)
             # next_v = self.eps*np.log(np.sum( np.sum(np.exp(Q/self.eps), axis=2), axis=1))
-            v = self.value_fun.get_values()
-            beta = 1/self.temperature
-            Q = self.rewards + self.discount*v
-            Q = np.sum(Q - np.expand_dims(np.max(Q, axis=1), axis=1), axis=2)
-            # Q = np.sum(Q, axis=2)
-            Q += self.eps
-            next_v = beta*np.log(np.sum(np.exp(Q/beta), axis=1))
+            # v = self.value_fun.get_values()
+            # beta = 1/self.temperature
+            # Q = np.sum(self.rewards + self.discount*v, axis=2)
+            # # print(Q)
+            # # print(np.expand_dims(np.max(Q, axis=1), axis=1))
+            # # Q = Q/np.expand_dims(np.max(Q, axis=1), axis=1)
+            # # Q = np.sum(Q, axis=2)
+            # Q += self.eps
+            # next_v = beta*np.log(np.sum(np.exp(Q/beta), axis=1))
+            # v = self.value_fun.get_values()
+            # beta = 1/self.temperature
+            # Q = self.rewards + self.discount*v
+            # # print(Q)
+            # # print(np.expand_dims(np.max(Q, axis=1), axis=1))
+            # Q = Q - np.expand_dims(np.max(Q, axis=1), axis=1)
+            # # Q = np.sum(Q, axis=2)
+            # Q += self.eps
+            # next_v = np.sum(beta*np.log(np.sum(np.exp(Q/beta), axis=1)), axis=2)
+            
+            # beta = 1/self.temperature
+            # v = self.value_fun.get_values()
+            # Q = np.sum(self.rewards, axis=2) + np.expand_dims(self.discount*v, axis=1)
+            # Q_sub = np.expand_dims(np.max(Q, axis=1), axis=1)
+            # # Q += self.eps
+        
+            # # Q = Q/(np.expand_dims(np.max(Q, axis=0), axis=0))
+            
+            # next_v = beta*np.log(np.sum(np.exp(Q/beta - Q_sub), axis=1))
+            # next_v += np.max(Q, axis=1)
+            # next_v = np.sum(next_v, axis=1)
+
             # print(v)
             # print(next_v)
+
+            beta = 1/self.temperature
+            v = self.value_fun.get_values()
+            Q = (self.rewards + self.discount*v)
+            Q_sub = np.expand_dims(np.max(Q, axis=1), axis=1)
+            next_v = beta*np.log(np.sum(np.exp((Q- Q_sub)/beta), axis=1))
+            # next_v += np.max(Q, axis=1)
+            next_v = np.max(next_v, axis=1)
+            print(next_v)
 
             """ Your code ends here"""
         else:
@@ -188,19 +221,61 @@ class ValueIteration(object):
             # z = np.sum( np.exp(np.sum( Q/self.eps, axis=2)) , axis=1)
             # z = np.expand_dims(z, axis=1)
             # pi = (1/z)*np.exp(np.sum( Q/self.eps, axis=2))
-            v = self.value_fun.get_values()
-            beta = 1/self.temperature
-            Q = self.rewards + self.discount*v
-            Q = np.sum(Q - np.expand_dims(np.max(Q, axis=1), axis=1), axis=2)
-            # print(Q.shape)
+            # v = self.value_fun.get_values()
+            # beta = 1/self.temperature
+            # Q = self.rewards + self.discount*v
+            # print(Q)
             # Q = np.sum(Q, axis=2)
-            Q += self.eps
-            z = np.sum(np.exp(Q/beta), axis=1)
-            z = np.expand_dims(z, axis=1) 
-            # print(z.shape)
-            pi = (1/z)*np.exp(Q/beta)
-            # print(pi.shape)
+            # print(Q)
+            # print(np.max(np.max(Q, axis=1), axis=0))
+            # # Q = Q/np.expand_dims(np.max(Q, axis=1), axis=1)
+            # # print(Q.shape)
+            # # Q = np.sum(Q, axis=2)
+            # Q += self.eps
+            # v = self.value_fun.get_values()
+            # beta = 1/self.temperature
+            # Q = self.rewards + self.discount*v
+            # # print(Q)
+            # # print(np.expand_dims(np.max(Q, axis=1), axis=1))
+            # Q = Q - np.expand_dims(np.max(Q, axis=1), axis=1)
+            # # Q = np.sum(Q, axis=2)
+            # Q += self.eps
+            # # next_v = np.sum(beta*np.log(np.sum(np.exp(Q/beta), axis=1)), axis=2)
+            # z = np.sum(np.exp(Q/beta), axis=1)
+            # z = np.expand_dims(z, axis=1) 
+            # pi = (1/z)*np.exp(Q/beta)
+            # print(pi)
+            # p1 = np.sum(pi, axis=2)
             # pi = self.policy.get_probs()
+            
+            # beta = 1/self.temperature
+            # v = self.value_fun.get_values()
+            # Q = np.sum(self.rewards, axis=2) + np.expand_dims(self.discount*v, axis=1)
+            # print(Q.shape)
+            # Q_sub = np.expand_dims(np.max(Q, axis=1), axis=1)
+            # # Q += self.eps
+        
+            # # Q = Q/(np.expand_dims(np.max(Q, axis=0), axis=0))
+            # # Q += self.eps
+            # # Q = Q/(np.expand_dims(np.max(Q, axis=0), axis=0))
+            # print(Q)            
+            # z = np.expand_dims(np.sum(np.exp(Q/beta), axis=1), axis=1)
+            # pi = (np.exp(Q/beta - Q_sub) + self.eps)/z
+
+            # pi = np.sum(pi, axis=2)
+
+            # print(pi)
+
+            beta = 1/self.temperature
+            v = self.value_fun.get_values()
+            Q = (self.rewards + self.discount*v)
+            Q_sub = np.expand_dims(np.max(Q, axis=1), axis=1)
+            # print(Q/beta)
+            # print(Q_sub)
+            z = np.expand_dims(np.sum(np.exp((Q)/beta), axis=1), axis=1)
+            pi = (np.exp(Q/beta - Q_sub) + self.eps)/z
+            pi = np.max(pi, axis=2)
+            
             """ Your code ends here"""
         else:
             raise NotImplementedError

@@ -3,3 +3,7 @@ Logging to /home/hubble-02/Pycharm Projects/IvLabs/AdvancedRobotics/cs287hw1/cs2
 | Average Returns | 0        |
 | Iteration       | 0        |
 ------------------------------
+------------------------------
+| Average Returns | 0        |
+| Iteration       | 1        |
+------------------------------

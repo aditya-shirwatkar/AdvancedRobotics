@@ -1,4 +1,4 @@
-Logging to /home/hubble-02/Pycharm Projects/IvLabs/AdvancedRobotics/cs287hw1/cs287-hw1-code/data/part1/GridWorldEnv1/policy_typemax_ent_temperature100.0/
+Logging to /home/hubble-02/Pycharm Projects/IvLabs/AdvancedRobotics/cs287hw1/cs287-hw1-code/data/part1/GridWorldEnv1/policy_typemax_ent_temperature0.01/
 ------------------------------
 | Average Returns | 0        |
 | Iteration       | 0        |
