@@ -182,11 +182,11 @@ class ValueIteration(object):
             # print(v)
             # print(next_v)
 
-            beta = 1/self.temperature
+            beta = self.temperature
             v = self.value_fun.get_values()
-            Q = np.mean(self.rewards + self.discount*v, axis=2)
+            Q = np.sum(self.transitions*(self.rewards + self.discount*v), axis=2)
             Q_sub = np.expand_dims(np.max(Q, axis=1), axis=1)
-            print(Q)
+            # print(Q)
             next_v = beta*np.log((np.sum(np.exp((Q- Q_sub)/beta), axis=1)))
             next_v += np.max(Q, axis=1)
             # next_v = np.max(next_v, axis=1)
@@ -267,16 +267,16 @@ class ValueIteration(object):
 
             # print(pi)
 
-            beta = 1/self.temperature
+            beta = self.temperature
             v = self.value_fun.get_values()
-            Q = np.mean(self.rewards + self.discount*v, axis=2)
+            Q = np.sum(self.transitions*(self.rewards + self.discount*v), axis=2)
             Q_sub = np.expand_dims(np.max(Q, axis=1), axis=1)
             # print(Q/beta)
             # print(Q_sub)
             z = (np.expand_dims(np.sum(np.exp((Q - Q_sub)/beta), axis=1), axis=1))
             pi = (np.exp((Q- Q_sub)/beta) + self.eps)/z
             # pi = np.max(pi, axis=2)
-            print(pi)
+            # print(pi)
             """ Your code ends here"""
         else:
             raise NotImplementedError

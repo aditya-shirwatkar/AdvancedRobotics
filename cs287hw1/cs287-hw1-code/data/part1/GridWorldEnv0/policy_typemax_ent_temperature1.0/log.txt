@@ -24,7 +24,7 @@ Logging to /home/hubble-02/Pycharm Projects/IvLabs/AdvancedRobotics/cs287hw1/cs2
 | Iteration       | 5        |
 ------------------------------
 ------------------------------
-| Average Returns | 0.05     |
+| Average Returns | 0.1      |
 | Iteration       | 6        |
 ------------------------------
 ------------------------------
@@ -32,7 +32,7 @@ Logging to /home/hubble-02/Pycharm Projects/IvLabs/AdvancedRobotics/cs287hw1/cs2
 | Iteration       | 7        |
 ------------------------------
 ------------------------------
-| Average Returns | 0        |
+| Average Returns | 0.05     |
 | Iteration       | 8        |
 ------------------------------
 ------------------------------
@@ -48,11 +48,11 @@ Logging to /home/hubble-02/Pycharm Projects/IvLabs/AdvancedRobotics/cs287hw1/cs2
 | Iteration       | 11       |
 ------------------------------
 ------------------------------
-| Average Returns | 0        |
+| Average Returns | 0.05     |
 | Iteration       | 12       |
 ------------------------------
 ------------------------------
-| Average Returns | 0        |
+| Average Returns | 0.05     |
 | Iteration       | 13       |
 ------------------------------
 ------------------------------
@@ -60,7 +60,7 @@ Logging to /home/hubble-02/Pycharm Projects/IvLabs/AdvancedRobotics/cs287hw1/cs2
 | Iteration       | 14       |
 ------------------------------
 ------------------------------
-| Average Returns | 0        |
+| Average Returns | 0.05     |
 | Iteration       | 15       |
 ------------------------------
 ------------------------------
@@ -80,7 +80,7 @@ Logging to /home/hubble-02/Pycharm Projects/IvLabs/AdvancedRobotics/cs287hw1/cs2
 | Iteration       | 19       |
 ------------------------------
 ------------------------------
-| Average Returns | 0        |
+| Average Returns | 0.05     |
 | Iteration       | 20       |
 ------------------------------
 ------------------------------
@@ -92,15 +92,15 @@ Logging to /home/hubble-02/Pycharm Projects/IvLabs/AdvancedRobotics/cs287hw1/cs2
 | Iteration       | 22       |
 ------------------------------
 ------------------------------
-| Average Returns | 0        |
+| Average Returns | 0.1      |
 | Iteration       | 23       |
 ------------------------------
 ------------------------------
-| Average Returns | 0        |
+| Average Returns | 0.1      |
 | Iteration       | 24       |
 ------------------------------
 ------------------------------
-| Average Returns | 0.05     |
+| Average Returns | 0.1      |
 | Iteration       | 25       |
 ------------------------------
 ------------------------------
@@ -136,7 +136,7 @@ Logging to /home/hubble-02/Pycharm Projects/IvLabs/AdvancedRobotics/cs287hw1/cs2
 | Iteration       | 33       |
 ------------------------------
 ------------------------------
-| Average Returns | 0.05     |
+| Average Returns | 0.1      |
 | Iteration       | 34       |
 ------------------------------
 ------------------------------
@@ -164,7 +164,7 @@ Logging to /home/hubble-02/Pycharm Projects/IvLabs/AdvancedRobotics/cs287hw1/cs2
 | Iteration       | 40       |
 ------------------------------
 ------------------------------
-| Average Returns | 0.05     |
+| Average Returns | 0.1      |
 | Iteration       | 41       |
 ------------------------------
 ------------------------------
@@ -172,11 +172,11 @@ Logging to /home/hubble-02/Pycharm Projects/IvLabs/AdvancedRobotics/cs287hw1/cs2
 | Iteration       | 42       |
 ------------------------------
 ------------------------------
-| Average Returns | 0        |
+| Average Returns | 0.05     |
 | Iteration       | 43       |
 ------------------------------
 ------------------------------
-| Average Returns | 0.1      |
+| Average Returns | 0.05     |
 | Iteration       | 44       |
 ------------------------------
 ------------------------------
@@ -196,6 +196,6 @@ Logging to /home/hubble-02/Pycharm Projects/IvLabs/AdvancedRobotics/cs287hw1/cs2
 | Iteration       | 48       |
 ------------------------------
 ------------------------------
-| Average Returns | 0        |
+| Average Returns | 0.05     |
 | Iteration       | 49       |
 ------------------------------

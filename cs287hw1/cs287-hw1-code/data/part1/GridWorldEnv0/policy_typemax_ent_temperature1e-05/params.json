@@ -2,5 +2,5 @@
   "env": "GridWorldEnv0",
   "policy_type": "max_ent",
   "render": false,
-  "temperature": 100.0
+  "temperature": 1e-05
 }
