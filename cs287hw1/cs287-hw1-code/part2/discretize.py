@@ -63,7 +63,9 @@ class Discretize(DiscretizeWrapper):
         obs_n = self.obs_n
 
         """INSERT YOUR CODE HERE"""
-        raise NotImplementedError
+        # raise NotImplementedError
+        s = self.get_sta
+        self.transition[id_s, id_a] = 0
 
     def add_done_transitions(self):
         """
@@ -71,7 +73,8 @@ class Discretize(DiscretizeWrapper):
         corresponds to the last state (self.obs_n or -1).
         """
         """INSERT YOUR CODE HERE"""
-        raise NotImplementedError
+        # raise NotImplementedError
+
 
 
 
