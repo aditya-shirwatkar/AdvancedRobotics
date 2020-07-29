@@ -39,9 +39,11 @@ class Discretize(DiscretizeWrapper):
                 it has the same size than states.
         """
         """INSERT YOUR CODE HERE"""
+        print(cont_state)
         cont_state = np.expand_dims(cont_state, axis=-1)
         if self.mode == 'nn':
-            raise NotImplementedError
+            states = cont_state
+            # raise NotImplementedError
 
         elif self.mode == 'linear':
             raise NotImplementedError
