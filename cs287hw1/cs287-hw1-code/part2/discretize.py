@@ -41,10 +41,13 @@ class Discretize(DiscretizeWrapper):
         """INSERT YOUR CODE HERE"""
         print(cont_state)
         cont_state = np.expand_dims(cont_state, axis=-1)
+        diff = self.state_points - cont_state
         if self.mode == 'nn':
-            states = cont_state
-            # raise NotImplementedError
-
+            id_s = (np.argmin(diff**2))
+            print(id_s)
+            states = np.take(self.state_points, id_s)
+            ids = self.get_id_from_coordinates(states)
+            probs = self.transitions[id_s, ]
         elif self.mode == 'linear':
             raise NotImplementedError
             """Your code ends here"""
@@ -62,10 +65,13 @@ class Discretize(DiscretizeWrapper):
         env = self._wrapped_env
         obs_n = self.obs_n
 
+        s = self.get_state_from_id(id_s)
+        print(s)
+        a = self.get_action_from_id(id_a)
+        ns, r, done, _ = env.step(a)
         """INSERT YOUR CODE HERE"""
-        # raise NotImplementedError
-        s = self.get_sta
-        self.transition[id_s, id_a] = 0
+        self.transitions[id_s, id_a] = self.get_id_from_coordinates(ns)
+        self.rewards[id_s, id_a] = r
 
     def add_done_transitions(self):
         """
@@ -74,6 +80,8 @@ class Discretize(DiscretizeWrapper):
         """
         """INSERT YOUR CODE HERE"""
         # raise NotImplementedError
+        self.transitions[-1] = -1.
+        self.rewards[-1] = -1.
 
 
 
