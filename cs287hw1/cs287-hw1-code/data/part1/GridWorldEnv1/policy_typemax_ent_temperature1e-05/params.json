@@ -1,6 +1,0 @@
-{
-  "env": "GridWorldEnv1",
-  "policy_type": "max_ent",
-  "render": true,
-  "temperature": 1e-05
-}
