@@ -17,11 +17,11 @@
 
 ### Deterministic Policy
 
-![](https://github.com/aditya-shirwatkar/AdvancedRobotics/blob/master/cs287-hw1/data/part1/GridWorldEnv0/policy_typedeterministic_temperature1.0/contour.gif)
+![](https://github.com/aditya-shirwatkar/AdvancedRobotics/blob/master/cs287-hw1/data/part1/GridWorldEnv0/policy_typedeterministic_temperature1.0/contour.gif) ![](https://github.com/aditya-shirwatkar/AdvancedRobotics/blob/master/cs287-hw1/data/part1/GridWorldEnv0/policy_typedeterministic_temperature1.0/rollouts.gif)
 
 ### Maximum Entropy Policy
 #### With Temperature = 0.01
-![](https://github.com/aditya-shirwatkar/AdvancedRobotics/blob/master/cs287-hw1/data/part1/GridWorldEnv0/policy_typemax_ent_temperature0.01/contour.gif)
+![](https://github.com/aditya-shirwatkar/AdvancedRobotics/blob/master/cs287-hw1/data/part1/GridWorldEnv0/policy_typemax_ent_temperature0.01/contour.gif) ![](https://github.com/aditya-shirwatkar/AdvancedRobotics/blob/master/cs287-hw1/data/part1/GridWorldEnv0/policy_typemax_ent_temperature0.01/rollouts.gif)
 
 # LQR
 
