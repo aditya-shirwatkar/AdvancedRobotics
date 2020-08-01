@@ -41,6 +41,8 @@
 
 ### Hopper
 
-
+![](https://github.com/aditya-shirwatkar/AdvancedRobotics/blob/master/cs287-hw2/Perturbed-Hopper/perturbe_0.gif) ![](https://github.com/aditya-shirwatkar/AdvancedRobotics/blob/master/cs287-hw2/Perturbed-Hopper/perturbe_1e-1.gif) ![](https://github.com/aditya-shirwatkar/AdvancedRobotics/blob/master/cs287-hw2/Perturbed-Hopper/perturbe_1.gif) ![](https://github.com/aditya-shirwatkar/AdvancedRobotics/blob/master/cs287-hw2/Perturbed-Hopper/perturbe_10.gif) ![](https://github.com/aditya-shirwatkar/AdvancedRobotics/blob/master/cs287-hw2/Perturbed-Hopper/plot_0.png)
 
 ### Half Cheetah
+
+![](https://github.com/aditya-shirwatkar/AdvancedRobotics/blob/master/cs287-hw2/Perturbed-Cheetah/perturbe_0.gif) ![](https://github.com/aditya-shirwatkar/AdvancedRobotics/blob/master/cs287-hw2/Perturbed-Cheetah/perturbe_1.gif) ![](https://github.com/aditya-shirwatkar/AdvancedRobotics/blob/master/cs287-hw2/Perturbed-Cheetah/perturbe_10.gif) ![](https://github.com/aditya-shirwatkar/AdvancedRobotics/blob/master/cs287-hw2/Perturbed-Cheetah/perturbe_100.gif) ![](https://github.com/aditya-shirwatkar/AdvancedRobotics/blob/master/cs287-hw2/Perturbed-Cheetah/plot_0.png)
